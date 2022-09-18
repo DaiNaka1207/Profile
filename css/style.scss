@@ -1,0 +1,188 @@
+@charset 'UTF-8';
+
+// 製作時間　3:10
+
+/* Common
+-------------------------------------------------- */
+html {scroll-behavior: smooth;}
+body {font-family: 'M PLUS 2', sans-serif;}
+
+h1 {font-size: 2.00rem;}
+h2 {font-size: 1.75rem;}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 4%;
+}
+
+article {
+    h2 {
+        width: max-content;
+        padding: 0 4px 4px;
+        margin: 0 auto 40px;
+        text-transform: uppercase;
+        border-bottom: solid 3px #000;
+    }
+}
+
+/* Header
+-------------------------------------------------- */
+#header {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    margin-bottom: 50px;
+    text-transform: capitalize;
+
+    h1 {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        
+        img {
+            width: 35px;
+            margin-right: 10px;
+        }
+    }
+
+    nav {
+        flex: 0 0 auto;
+        display: flex;
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+    }
+}
+
+/* MainVisual
+-------------------------------------------------- */
+#main_visual {
+    margin-bottom: 150px;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+/* About
+-------------------------------------------------- */
+#about {
+    margin-bottom: 150px;
+
+    .profile {
+        display: flex;
+        gap: 30px;
+        width: 80%;
+        margin: auto;
+
+        img {
+            object-fit: cover;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+        }
+
+        .item {
+            h3 {
+                font-size: 1.50rem;
+                text-transform: capitalize;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+/* Work
+-------------------------------------------------- */
+#work {
+    margin-bottom: 150px;
+}
+
+#work_box {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    .work_item {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 4px;
+
+        h3 {
+            font-size: 0.80rem;
+            text-transform: capitalize;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+/* Footer
+-------------------------------------------------- */
+#footer {
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Mobile
+-------------------------------------------------- */
+@media (max-width: 600px) {
+    
+    /* Header
+    -------------------------------------------------- */
+    #header {
+        flex-direction: column;
+        height: 100px;
+        justify-content: initial;
+        align-items: center;
+        gap: 15px;
+        margin: 30px 0 10px;
+        
+        a {
+            font-size: 1.25rem;
+        }
+    }
+
+    /* MainVisual
+    -------------------------------------------------- */
+    #main_visual {
+        height: 300px;
+    }
+
+    /* About
+    -------------------------------------------------- */
+    #about {
+        .profile {
+            flex-direction: column;
+            align-items: center;
+            width: 92%;
+            gap: 15px;
+
+            h3 {
+                text-align: center;
+            }
+        }
+    }
+
+    /* Work
+    -------------------------------------------------- */
+    #work_box {
+        flex-direction: column;
+        gap: 45px;
+
+        .work_item {
+            h3 {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
